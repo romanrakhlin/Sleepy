@@ -9,22 +9,18 @@
 import UIKit
 
 class ResultsController: UIViewController {
-
+    
+    @IBOutlet weak var resultsLabel: UILabel!
+    
+    //var gam = ViewController.sharedInstance.answer
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.resultsLabel.text = "New!!"
+        
+        //if gam == "It was 1" {
+        //    self.resultsLabel.text = "New!!"
+        //}
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
