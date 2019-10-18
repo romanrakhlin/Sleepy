@@ -343,7 +343,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         pickerView.dataSource = self
         
         button.layer.cornerRadius = 20
-        photo.layer.cornerRadius = 30
+        //photo.layer.cornerRadius = 30
         
         hoursField.inputView = pickerView
         minutesField.inputView = pickerView
