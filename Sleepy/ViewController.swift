@@ -339,10 +339,32 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) {
+            (granted, error) in
+            
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Hey there! 🔥🔥"
+        content.body = "🙀Do you want to know what time you need to wake up tomorrow!?!"
+        
+        let date = Date()
+        var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        
+        dateComponents.hour = 21
+        dateComponents.minute = 00
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let uuisString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuisString, content: content, trigger: trigger)
+        
+        center.add(request) { (error) in
+        }
+        
         pickerView.delegate = self
         pickerView.dataSource = self
-        
-        button.layer.cornerRadius = 20
         
         hoursField.inputView = pickerView
         minutesField.inputView = pickerView
