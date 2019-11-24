@@ -288,11 +288,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfr-gM-KYZ">
-                                <rect key="frame" x="22" y="156" width="377" height="210.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="210.5" id="5w6-qK-M38"/>
-                                    <constraint firstAttribute="width" constant="377" id="ABq-Of-lcF"/>
-                                </constraints>
+                                <rect key="frame" x="12" y="156" width="390" height="210.5"/>
                                 <string key="text">This application receives data on what time you need to wake up and gives out the time intervals at which it is recommended to go to bed. If you fall asleep and wake up at the indicated time, then getting up will be much easier, the head should not hurt and there should be a lot of energy.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
@@ -300,9 +296,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="dfr-gM-KYZ" firstAttribute="top" secondItem="I3n-oS-C1r" secondAttribute="top" constant="16" id="FQ6-8l-7dG"/>
-                            <constraint firstItem="I3n-oS-C1r" firstAttribute="trailing" secondItem="dfr-gM-KYZ" secondAttribute="trailing" constant="15" id="eLx-C4-X9Z"/>
-                            <constraint firstItem="dfr-gM-KYZ" firstAttribute="leading" secondItem="I3n-oS-C1r" secondAttribute="leading" constant="22" id="o8H-hf-oX5"/>
+                            <constraint firstItem="dfr-gM-KYZ" firstAttribute="leading" secondItem="I3n-oS-C1r" secondAttribute="leading" constant="12" id="BX4-0p-iIk"/>
+                            <constraint firstItem="I3n-oS-C1r" firstAttribute="trailing" secondItem="dfr-gM-KYZ" secondAttribute="trailing" constant="12" id="GGa-wc-O0B"/>
+                            <constraint firstItem="dfr-gM-KYZ" firstAttribute="top" secondItem="I3n-oS-C1r" secondAttribute="top" constant="16" id="y97-SH-qkf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="I3n-oS-C1r"/>
                     </view>
