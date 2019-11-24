@@ -1,2 +1,2 @@
 # Sleepy
-![image](./img1.JPG, ./img2.JPG) 
+![image](./img1.JPG, img2.JPG) 
