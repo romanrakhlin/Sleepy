@@ -1,4 +1,3 @@
 # Sleepy
-app for sleep
-
-![image](./img.png) 
+![image](./img1.JPG)
+![image](./img2.JPG)
