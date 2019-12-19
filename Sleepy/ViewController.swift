@@ -35,303 +35,304 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBAction func button(_ sender: UIButton) {
         
         if hoursField.text!.isEmpty && minutesField.text!.isEmpty {
+            
             self.waringLabel.text = "Please, fill all fields!"
-        }
-        else if hoursField.text!.isEmpty {
+        } else if hoursField.text!.isEmpty {
+            
             self.waringLabel.text = "Please, fill all fields!"
-        }
-        else if minutesField.text!.isEmpty {
+        } else if minutesField.text!.isEmpty {
+            
             self.waringLabel.text = "Please, fill all fields!"
-        }
-        else if hoursField.text! == "1" && minutesField.text! == "00" {
+        } else if hoursField.text! == "1" && minutesField.text! == "00" {
+            
             first.text = "4:00 PM"
             second.text = "5:30 PM"
             third.text = "7:00 PM"
             fourth.text = "8:30 PM"
-        }
-        else if hoursField.text! == "1" && minutesField.text! == "10" {
+        } else if hoursField.text! == "1" && minutesField.text! == "10" {
+            
             first.text = "4:10 PM"
             second.text = "5:40 PM"
             third.text = "7:10 PM"
             fourth.text = "8:40 PM"
-        }
-        else if hoursField.text! == "1" && minutesField.text! == "30" {
+        } else if hoursField.text! == "1" && minutesField.text! == "30" {
+            
             first.text = "4:30 PM"
             second.text = "6:00 PM"
             third.text = "7:30 PM"
             fourth.text = "9:00 PM"
-        }
-        else if hoursField.text! == "1" && minutesField.text! == "50" {
+        } else if hoursField.text! == "1" && minutesField.text! == "50" {
+            
             first.text = "4:50 PM"
             second.text = "6:20 PM"
             third.text = "7:50 PM"
             fourth.text = "9:20 PM"
-        }
-        else if hoursField.text! == "2" && minutesField.text! == "00" {
+        } else if hoursField.text! == "2" && minutesField.text! == "00" {
+            
             first.text = "5:00 PM"
             second.text = "6:30 PM"
             third.text = "8:00 PM"
             fourth.text = "9:30 PM"
-        }
-        else if hoursField.text! == "2" && minutesField.text! == "10" {
+        } else if hoursField.text! == "2" && minutesField.text! == "10" {
+            
             first.text = "5:10 PM"
             second.text = "6:40 PM"
             third.text = "8:10 PM"
             fourth.text = "9:40 PM"
-        }
-        else if hoursField.text! == "2" && minutesField.text! == "30" {
+        } else if hoursField.text! == "2" && minutesField.text! == "30" {
+            
             first.text = "5:30 PM"
             second.text = "7:00 PM"
             third.text = "8:30 PM"
             fourth.text = "10:00 PM"
-        }
-        else if hoursField.text! == "2" && minutesField.text! == "50" {
+        } else if hoursField.text! == "2" && minutesField.text! == "50" {
+            
             first.text = "5:50 PM"
             second.text = "7:20 PM"
             third.text = "8:50 PM"
             fourth.text = "10:20 PM"
-        }
-        else if hoursField.text! == "3" && minutesField.text! == "00" {
+        } else if hoursField.text! == "3" && minutesField.text! == "00" {
+            
             first.text = "6:00 PM"
             second.text = "7:30 PM"
             third.text = "9:00 PM"
             fourth.text = "10:30 PM"
-        }
-        else if hoursField.text! == "3" && minutesField.text! == "10" {
+        } else if hoursField.text! == "3" && minutesField.text! == "10" {
+            
             first.text = "6:10 PM"
             second.text = "7:40 PM"
             third.text = "9:10 PM"
             fourth.text = "10:40 PM"
-        }
-        else if hoursField.text! == "3" && minutesField.text! == "30" {
+        } else if hoursField.text! == "3" && minutesField.text! == "30" {
+            
             first.text = "6:30 PM"
             second.text = "8:00 PM"
             third.text = "9:30 PM"
             fourth.text = "11:00 PM"
-        }
-        else if hoursField.text! == "3" && minutesField.text! == "50" {
+        } else if hoursField.text! == "3" && minutesField.text! == "50" {
+            
             first.text = "6:50 PM"
             second.text = "8:20 PM"
             third.text = "9:50 PM"
             fourth.text = "11:20 PM"
-        }
-        else if hoursField.text! == "4" && minutesField.text! == "00" {
+        } else if hoursField.text! == "4" && minutesField.text! == "00" {
+            
             first.text = "7:00 PM"
             second.text = "8:30 PM"
             third.text = "10:00 PM"
             fourth.text = "11:30 PM"
-        }
-        else if hoursField.text! == "4" && minutesField.text! == "10" {
+        } else if hoursField.text! == "4" && minutesField.text! == "10" {
+            
             first.text = "7:10 PM"
             second.text = "8:40 PM"
             third.text = "10:10 PM"
             fourth.text = "11:40 PM"
-        }
-        else if hoursField.text! == "4" && minutesField.text! == "30" {
+        } else if hoursField.text! == "4" && minutesField.text! == "30" {
+            
             first.text = "7:30 PM"
             second.text = "9:00 PM"
             third.text = "10:30 PM"
             fourth.text = "12:00 AM"
-        }
-        else if hoursField.text! == "4" && minutesField.text! == "50" {
+        } else if hoursField.text! == "4" && minutesField.text! == "50" {
+            
             first.text = "7:50 PM"
             second.text = "9:20 PM"
             third.text = "10:50 PM"
             fourth.text = "12:20 AM"
-        }
-        else if hoursField.text! == "5" && minutesField.text! == "00" {
+        } else if hoursField.text! == "5" && minutesField.text! == "00" {
+            
             first.text = "8:00 PM"
             second.text = "9:30 PM"
             third.text = "11:00 PM"
             fourth.text = "12:30 AM"
-        }
-        else if hoursField.text! == "5" && minutesField.text! == "10" {
+        } else if hoursField.text! == "5" && minutesField.text! == "10" {
+            
             first.text = "8:10 PM"
             second.text = "9:40 PM"
             third.text = "11:10 PM"
             fourth.text = "12:40 AM"
-        }
-        else if hoursField.text! == "5" && minutesField.text! == "30" {
+        } else if hoursField.text! == "5" && minutesField.text! == "30" {
+            
             first.text = "8:30 PM"
             second.text = "10:00 PM"
             third.text = "11:30 PM"
             fourth.text = "1:00 AM"
-        }
-        else if hoursField.text! == "5" && minutesField.text! == "50" {
+        } else if hoursField.text! == "5" && minutesField.text! == "50" {
+            
             first.text = "8:50 PM"
             second.text = "10:20 PM"
             third.text = "11:50 PM"
             fourth.text = "1:20 AM"
-        }
-        else if hoursField.text! == "6" && minutesField.text! == "00" {
+        } else if hoursField.text! == "6" && minutesField.text! == "00" {
+            
             first.text = "9:00 PM"
             second.text = "10:30 PM"
             third.text = "12:00 AM"
             fourth.text = "1:30 AM"
-        }
-        else if hoursField.text! == "6" && minutesField.text! == "10" {
+        } else if hoursField.text! == "6" && minutesField.text! == "10" {
+            
             first.text = "9:10 PM"
             second.text = "10:40 PM"
             third.text = "12:10 AM"
             fourth.text = "1:40 AM"
-        }
-        else if hoursField.text! == "6" && minutesField.text! == "30" {
+        } else if hoursField.text! == "6" && minutesField.text! == "30" {
+            
             first.text = "9:30 PM"
             second.text = "11:00 PM"
             third.text = "12:30 AM"
             fourth.text = "2:00 AM"
-        }
-        else if hoursField.text! == "6" && minutesField.text! == "50" {
+        } else if hoursField.text! == "6" && minutesField.text! == "50" {
+            
             first.text = "9:50 PM"
             second.text = "11:20 PM"
             third.text = "12:50 AM"
             fourth.text = "2:20 AM"
-        }
-        else if hoursField.text! == "7" && minutesField.text! == "00" {
+        } else if hoursField.text! == "7" && minutesField.text! == "00" {
+            
             first.text = "10:00 PM"
             second.text = "11:30 PM"
             third.text = "1:00 AM"
             fourth.text = "2:30 AM"
-        }
-        else if hoursField.text! == "7" && minutesField.text! == "10" {
+        } else if hoursField.text! == "7" && minutesField.text! == "10" {
+            
             first.text = "10:10 PM"
             second.text = "11:40 PM"
             third.text = "1:10 AM"
             fourth.text = "2:40 AM"
-        }
-        else if hoursField.text! == "7" && minutesField.text! == "30" {
+        } else if hoursField.text! == "7" && minutesField.text! == "30" {
+            
             first.text = "10:30 PM"
             second.text = "12:00 AM"
             third.text = "1:30 AM"
             fourth.text = "3:00 AM"
-        }
-        else if hoursField.text! == "7" && minutesField.text! == "50" {
+        } else if hoursField.text! == "7" && minutesField.text! == "50" {
+            
             first.text = "10:50 PM"
             second.text = "12:20 AM"
             third.text = "1:50 AM"
             fourth.text = "3:20 AM"
-        }
-        else if hoursField.text! == "8" && minutesField.text! == "00" {
+        } else if hoursField.text! == "8" && minutesField.text! == "00" {
+            
             first.text = "11:00 PM"
             second.text = "12:30 PM"
             third.text = "2:00 AM"
             fourth.text = "3:30 AM"
-        }
-        else if hoursField.text! == "8" && minutesField.text! == "10" {
+        } else if hoursField.text! == "8" && minutesField.text! == "10" {
+            
             first.text = "11:10 PM"
             second.text = "12:40 PM"
             third.text = "2:10 AM"
             fourth.text = "3:40 AM"
-        }
-        else if hoursField.text! == "8" && minutesField.text! == "30" {
+        } else if hoursField.text! == "8" && minutesField.text! == "30" {
+            
             first.text = "11:30 PM"
             second.text = "1:00 AM"
             third.text = "2:30 AM"
             fourth.text = "4:00 AM"
-        }
-        else if hoursField.text! == "8" && minutesField.text! == "50" {
+        } else if hoursField.text! == "8" && minutesField.text! == "50" {
+            
             first.text = "11:50 PM"
             second.text = "1:20 AM"
             third.text = "2:50 AM"
             fourth.text = "4:20 AM"
-        }
-        else if hoursField.text! == "9" && minutesField.text! == "00" {
+        } else if hoursField.text! == "9" && minutesField.text! == "00" {
+            
             first.text = "12:00 PM"
             second.text = "1:30 AM"
             third.text = "3:00 AM"
             fourth.text = "4:30 AM"
-        }
-        else if hoursField.text! == "9" && minutesField.text! == "10" {
+        } else if hoursField.text! == "9" && minutesField.text! == "10" {
+            
             first.text = "12:10 PM"
             second.text = "1:40 AM"
             third.text = "3:10 AM"
             fourth.text = "4:40 AM"
-        }
-        else if hoursField.text! == "9" && minutesField.text! == "30" {
+        } else if hoursField.text! == "9" && minutesField.text! == "30" {
+            
             first.text = "12:30 PM"
             second.text = "2:00 AM"
             third.text = "3:30 AM"
             fourth.text = "5:00 AM"
-        }
-        else if hoursField.text! == "9" && minutesField.text! == "50" {
+        } else if hoursField.text! == "9" && minutesField.text! == "50" {
+            
             first.text = "12:50 PM"
             second.text = "2:20 AM"
             third.text = "3:50 AM"
             fourth.text = "5:20 AM"
-        }
-        else if hoursField.text! == "10" && minutesField.text! == "00" {
+        } else if hoursField.text! == "10" && minutesField.text! == "00" {
+            
             first.text = "1:00 AM"
             second.text = "2:30 AM"
             third.text = "4:00 AM"
             fourth.text = "5:30 AM"
-        }
-        else if hoursField.text! == "10" && minutesField.text! == "10" {
+        } else if hoursField.text! == "10" && minutesField.text! == "10" {
+            
             first.text = "1:10 AM"
             second.text = "2:40 AM"
             third.text = "4:10 AM"
             fourth.text = "5:40 AM"
-        }
-        else if hoursField.text! == "10" && minutesField.text! == "30" {
+        } else if hoursField.text! == "10" && minutesField.text! == "30" {
+            
             first.text = "1:30 AM"
             second.text = "3:00 AM"
             third.text = "4:30 AM"
             fourth.text = "6:00 AM"
-        }
-        else if hoursField.text! == "10" && minutesField.text! == "50" {
+        } else if hoursField.text! == "10" && minutesField.text! == "50" {
+            
             first.text = "2:50 AM"
             second.text = "4:20 AM"
             third.text = "6:50 AM"
             fourth.text = "7:20 AM"
-        }
-        else if hoursField.text! == "11" && minutesField.text! == "00" {
+        } else if hoursField.text! == "11" && minutesField.text! == "00" {
+            
             first.text = "2:00 AM"
             second.text = "3:30 AM"
             third.text = "5:00 AM"
             fourth.text = "6:30 AM"
-        }
-        else if hoursField.text! == "11" && minutesField.text! == "10" {
+        } else if hoursField.text! == "11" && minutesField.text! == "10" {
+            
             first.text = "2:10 AM"
             second.text = "4:40 AM"
             third.text = "5:10 AM"
             fourth.text = "7:40 AM"
-        }
-        else if hoursField.text! == "11" && minutesField.text! == "30" {
+        } else if hoursField.text! == "11" && minutesField.text! == "30" {
+            
             first.text = "2:30 AM"
             second.text = "4:00 AM"
             third.text = "5:30 AM"
             fourth.text = "7:00 AM"
-        }
-        else if hoursField.text! == "11" && minutesField.text! == "50" {
+        } else if hoursField.text! == "11" && minutesField.text! == "50" {
+            
             first.text = "2:50 AM"
             second.text = "4:20 AM"
             third.text = "5:50 AM"
             fourth.text = "7:20 AM"
-        }
-        else if hoursField.text! == "12" && minutesField.text! == "00" {
+        } else if hoursField.text! == "12" && minutesField.text! == "00" {
+            
             first.text = "3:00 AM"
             second.text = "4:30 AM"
             third.text = "6:00 AM"
             fourth.text = "7:30 AM"
-        }
-        else if hoursField.text! == "12" && minutesField.text! == "10" {
+        } else if hoursField.text! == "12" && minutesField.text! == "10" {
+            
             first.text = "3:10 AM"
             second.text = "4:40 AM"
             third.text = "6:10 AM"
             fourth.text = "7:40 AM"
-        }
-        else if hoursField.text! == "12" && minutesField.text! == "30" {
+        } else if hoursField.text! == "12" && minutesField.text! == "30" {
+            
             first.text = "3:30 AM"
             second.text = "5:00 AM"
             third.text = "6:30 AM"
             fourth.text = "8:00 AM"
-        }
-        else if hoursField.text! == "12" && minutesField.text! == "50" {
+        } else if hoursField.text! == "12" && minutesField.text! == "50" {
+            
             first.text = "3:50 AM"
             second.text = "5:20 AM"
             third.text = "6:50 AM"
             fourth.text = "8:20 AM"
-        }
-        else {
+        } else {
+            
             self.waringLabel.text = "Incorrect input"
         }
     }
@@ -350,7 +351,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         content.body = ""
         
         let date = Date()
-        var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date.addingTimeInterval(10))
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date.addingTimeInterval(10))
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
