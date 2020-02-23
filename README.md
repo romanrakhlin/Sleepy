@@ -4,4 +4,4 @@ This app allows you to track the time when you need to go to sleep. The app take
 
 # Screenshots
 
-![image](./preview.jpg)
+![image](./img.jpg)
