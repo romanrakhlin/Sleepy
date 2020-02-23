@@ -11,4 +11,4 @@ This app allows you to track the time when you need to go to sleep. The app take
 
 ## License
 
-Magnetic is available under the MIT license. See the LICENSE file for more info.
+Sleepy is available under the MIT license. See the LICENSE file for more info.
