@@ -7,3 +7,7 @@ This app allows you to track the time when you need to go to sleep. The app take
 ## Screenshots
 
 ![image](./img.jpg)
+
+## License
+
+Magnetic is available under the MIT license. See the LICENSE file for more info.
