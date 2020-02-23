@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate {
     
@@ -340,95 +341,109 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) {
-            (granted, error) in
-            
-        }
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
         
-        let content = UNMutableNotificationContent()
-        content.title = ""
-        content.body = ""
-        
-        let date = Date()
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date.addingTimeInterval(10))
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        
-        let uuisString = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuisString, content: content, trigger: trigger)
-        
-        center.add(request) { (error) in
-        }
-        
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        
-        hoursField.inputView = pickerView
-        minutesField.inputView = pickerView
+        self.hoursField.inputView = pickerView
+        self.minutesField.inputView = pickerView
 
         updatePicker()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Title"
+        content.body = "Body"
+        content.sound = UNNotificationSound.default
+
+        let gregorian = Calendar(identifier: .gregorian)
+        let now = Date()
+        var components = gregorian.dateComponents([.year, .month, .day, .hour, .minute, .second], from: now)
+
+        components.hour = 19
+        components.minute = 00
+        components.second = 00
+
+        let date = gregorian.date(from: components)!
+
+        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: true)
+
+        let request = UNNotificationRequest(identifier: "ViewController", content: content, trigger: trigger)
+        print("INSIDE NOTIFICATION")
+
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: {(error) in
+            if error != nil {
+                print("SOMETHING WENT WRONG")
+            }
+        })
     }
 
     func updatePicker() {
+        
         let pickerView = UIPickerView()
         pickerView.reloadAllComponents()
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
         if hoursField.isFirstResponder == true {
+            
             return hours.count
-        }
-        else if minutesField.isFirstResponder == true {
+        } else if minutesField.isFirstResponder == true {
+            
             return minutes.count
-        }
-        else if hoursField.isFirstResponder == false {
+        } else if hoursField.isFirstResponder == false {
+            
             return minutes.count
-        }
-        else if minutesField.isFirstResponder == false {
+        } else if minutesField.isFirstResponder == false {
+            
             return hours.count
-        }
-        else {
+        } else {
+            
             return 0
         }
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         if hoursField.isFirstResponder == true {
+            
             return hours[row]
-        }
-        else if minutesField.isFirstResponder == true {
+        } else if minutesField.isFirstResponder == true {
+            
             return minutes[row]
-        }
-        else if hoursField.isFirstResponder == false {
+        } else if hoursField.isFirstResponder == false {
+            
             return minutes[row]
-        }
-        else if minutesField.isFirstResponder == false {
+        } else if minutesField.isFirstResponder == false {
+            
             return hours[row]
-        }
-        else {
+        } else {
+            
             return ""
         }
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
         if hoursField.isFirstResponder == true {
+            
             hoursField.text = hours[row]
             self.view.endEditing(true)
-        }
-        else if minutesField.isFirstResponder == true {
+        } else if minutesField.isFirstResponder == true {
+            
             minutesField.text = minutes[row]
             self.view.endEditing(true)
-        }
-        else if hoursField.isFirstResponder == false {
+        } else if hoursField.isFirstResponder == false {
+            
             minutesField.text = minutes[row]
             self.view.endEditing(true)
-        }
-        else if minutesField.isFirstResponder == false {
+        } else if minutesField.isFirstResponder == false {
+            
             hoursField.text = hours[row]
             self.view.endEditing(true)
         }
